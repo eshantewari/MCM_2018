@@ -1,0 +1,40 @@
+
+#### Documentation for smallindexes
+
+This is pretty simple to use. The two functions you will want to use are create_source_profile and create_sector_profile.
+The functions are almost identical.
+
+To create a source profile, use the function create_source_profile. It will graph a profile of the source
+and return a dataframe of the data.
+
+It has two mandatory inputs: the state (i.e. 'TX'), the source (i.e. 'CL'). The list of source codes, as well as what they
+correspond to, is below.
+
+sourcedic = {'CL':'Coal', 'NN': 'Natural Gas', 'PA': 'Petroleum Products',
+             'NU': "Nuclear Electric Power", 'EM': 'Fuel Ethanol',
+             'GE': 'Geothermal', 'HY': 'Hydroelectric', 'SO': 'Solar Thermal',
+             'WD': 'wood', 'WS': 'Biomass waste', 'ES': 'Electricity Sales',
+             'LO': 'Electrical System Losses', 'WY': 'Wind'}
+
+It has a couple of optional inputs:
+(1) The min, which is the minimum percent of total use that the source needs to hit in order to be graphed. It defaults to 0.01.
+(2) pop_adj, which is a boolean that tells the function whether or not to look at per capita figures. It defaults to true,
+whcih means it will graph per capita figures.
+(3) inf_adj, which is a bollean that tells the function whether to account for inflation. It defaults to True, which means
+it will adjust for inflation (but only if it's graphing something that has to do with money).
+(4) unit, which defaults to 'B'. When unit = 'B', it will graph in billions of BTU produced/consumed. When unit = 'V',
+it will graph in millions of dollars spent on a source/sector.
+
+The function create_sector_profile is exactly the same but it takes a sector as an input. The sectors are below.
+sectordic = {'CC': 'Comercial', 'IC': 'Industrial', 'RC':'Residential', 'AC': 'Transportation',
+             'TC': 'Total Primary Consumption', 'TX': 'Total End Use', 'EG': 'Total Generation',
+             'EI': 'Electric Sector Consumption'}
+
+Example use:
+
+coaldata = create_source_profile('TX', 'CL', min=0.05, inf_adj=False, unit='V')
+This graphs and returns data of the amount of coal purchased over time. It does not adjust for inflation.
+
+transportdata = create_sector_profile('AZ', 'AC', min=0.01, pop_adj = True, unit='B')
+This graphs and returns data of the amount of energy used by the transportation sector, by source, over time, in BTU.
+It does this in per capita figures.
