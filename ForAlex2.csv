@@ -1,0 +1,116 @@
+MSN,Description,Unit
+CLACB,Coal consumed by the transportation sector.,Billion Btu
+CLACD,Coal price in the transportation sector.,Dollars per million Btu
+CLACK,Factor for converting coal consumed by the transportation sector from physical units to Btu.,Million Btu per short ton
+CLACP,Coal consumed by the transportation sector.,Thousand short tons
+CLACV,Coal expenditures in the transportation sector.,Million dollars
+CLCCB,Coal consumed by the commercial sector.,Billion Btu
+CLCCD,Coal price in the commercial sector.,Dollars per million Btu
+CLCCP,Coal consumed by the commercial sector.,Thousand short tons
+CLCCV,Coal expenditures in the commercial sector.,Million dollars
+CLEIB,Coal consumed by the electric power sector.,Billion Btu
+CLEID,Coal price in the electric power sector.,Dollars per million Btu
+CLEIK,Factor for converting coal consumed by the electric power sector from physical units to Btu.,Million Btu per short ton
+CLEIP,Coal consumed by the electric power sector.,Thousand short tons
+CLEIV,Coal expenditures in the electric power sector.,Million dollars
+CLICB,Coal consumed by the industrial sector.,Billion Btu
+CLICD,Coal price in the industrial sector.,Million dollars
+CLICP,Coal consumed by the industrial sector.,Thousand short tons
+CLICV,Coal expenditures in the industrial sector.,Million dollars
+CLRCB,Coal consumed by the residential sector.,Billion Btu
+CLRCD,Coal price in the residential sector.,Dollars per million Btu
+CLRCP,Coal consumed by the residential sector.,Thousand short tons
+CLRCV,Coal expenditures in the residential sector.,Million dollars
+CLTCB,Coal total consumption.,Billion Btu
+CLTCD,"Coal average price, all sectors.",Dollars per million Btu
+CLTCP,Coal total consumption.,Thousand short tons
+CLTCV,Coal total expenditures.,Million dollars
+CLTXB,Coal total end-use consumption.,Billion Btu
+CLTXD,"Coal average price, all end-use sectors.",Dollars per million Btu
+CLTXP,Coal total end-use consumption.,Thousand barrels
+CLTXV,Coal total end-use expenditures.,Million dollars
+EMACB,"Fuel ethanol, excluding denaturant, consumed by the transportation sector.   ",Billion Btu
+EMACV,"Fuel ethanol, excluding denaturant, expenditures in the transportation sector.",Million dollars
+EMCCB,"Fuel ethanol, excluding denaturant, consumed by the commercial sector ",Billion Btu
+EMCCV,"Fuel ethanol, excluding denaturant, expenditures in the commercial sector.",Million dollars
+EMICB,"Fuel ethanol, excluding denaturant, consumed by the industrial sector. ",Billion Btu
+EMICV,"Fuel ethanol, excluding denaturant, expenditures in the industrial sector.",Million dollars
+EMTCB,"Fuel ethanol, excluding denaturant, total consumption.",Billion Btu
+EMTCV,"Fuel ethanol, excluding denaturant, total expenditures.",Million dollars
+ESACB,"Electricity consumed by (i.e., sold to) the transportation sector.",Billion Btu
+ESACD,Electricity price in the transportation sector.,Dollars per million Btu
+ESACP,"Electricity consumed by (i.e., sold to) the transportation sector.",Million kilowatthours
+ESACV,Electricity expenditures in the transportation sector.,Million dollars
+ESCCB,"Electricity consumed by (i.e., sold to) the commercial sector.",Billion Btu
+ESCCD,Electricity price in the commercial sector.,Dollars per million Btu
+ESCCP,"Electricity consumed by (i.e., sold to) the commercial sector.",Million kilowatthours
+ESCCV,Electricity expenditures in the commercial sector.,Million dollars
+ESICB,"Electricity consumed by (i.e., sold to) the industrial sector.",Billion Btu
+ESICD,Electricity price in the industrial sector.,Dollars per million Btu
+ESICP,"Electricity consumed by (i.e., sold to) the industrial sector.",Million kilowatthours
+ESICV,Electricity expenditures in the industrial sector.,Million dollars
+ESRCB,"Electricity consumed by (i.e., sold to) the residential sector.",Billion Btu
+ESRCD,Electricity price in the residential sector.,Dollars per million Btu
+ESRCP,"Electricity consumed by (i.e., sold to) the residential sector.",Million kilowatthours
+ESRCV,Electricity expenditures in the residential sector.,Million dollars
+ESTCB,"Electricity total consumption (i.e., sold).",Billion Btu
+ESTCD,"Electricity average price, all sectors.",Dollars per million Btu
+ESTCP,"Electricity total consumption (i.e., sold).",Million kilowatthours
+ESTCV,Electricity total expenditures.,Million dollars
+ESTXB,"Electricity total end-use consumption (i.e., sold).",Billion Btu
+ESTXD,"Electricity average price, all end-use sectors.",Dollars per million Btu
+ESTXP,"Electricity total end-use consumption (i.e., sold).",Thousand barrels
+ESTXV,Electricity total end-use expenditures.,Million dollars
+GECCB,Direct use of geothermal energy and heat pumps in the commercial sector.,Billion Btu
+GEEGB,Electricity produced from geothermal energy by the electric power sector.,Billion Btu
+GEEGP,Electricity produced from geothermal energy by the electric power sector.,Million kilowatthours
+GEICB,Direct use of geothermal energy and heat pumps in the industrial sector.,Billion Btu
+GERCB,Direct use of geothermal energy and heat pumps in the residential sector.,Billion Btu
+GETCB,Geothermal energy total consumption.,Billion Btu
+GETXB,Geothermal total end-use consumption.,Billion Btu
+GETXV,,
+HYCCB,Hydroelectricity produced in the commercial sector.,Billion Btu
+HYCCP,Hydroelectricity produced in the commercial sector.,Million kilowatthours
+HYEGB,Hydroelectricity produced by the electric power sector.,Billion Btu
+HYEGP,Hydroelectricity produced by the electric power sector.,Million kilowatthours
+HYICB,Hydroelectricity produced in the industrial sector.,Billion Btu
+HYICP,Hydroelectricity produced in the industrial sector.,Million kilowatthours
+HYTCB,Hydroelectricity total production.,Billion Btu
+HYTCP,Hydroelectricity total production.,Million kilowatthours
+HYTXB,Hydroelectricity produced by the end-use sectors.,Billion Btu
+HYTXP,Hydroelectricity produced by the end-use sectors.,Million kilowatthours
+HYTXV,,
+LOACB,The transportation sector's share of electrical system energy losses.,Billion Btu
+LOCCB,The commercial sector's share of electrical system energy losses.,Billion Btu
+LOICB,The industrial sector's share of electrical system energy losses.,Billion Btu
+LORCB,The residential sector's share of electrical system energy losses.,Billion Btu
+LOTCB,Total electrical system energy losses.,Billion Btu
+LOTXB,Total electrical system energy losses allocated to the end-use sectors.,Billion Btu
+NNACB,Natural gas consumed by the transportation sector.  (Code used in SEDS 2006.),Billion Btu
+NNCCB,Natural gas consumed by (delivered to) the commercial sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.),Billion Btu
+NNEIB,Natural gas consumed by the electric power sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.),Billion Btu
+NNICB,Natural gas consumed by (delivered to) the industrial sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.),Billion Btu
+NNRCB,Natural gas consumed by (delivered to) the residential sector (excluding supplemental gaseous fuels).  (Code used in SEDS 2006.),Billion Btu
+NNTCB,Natural gas total consumption (excluding supplemental gaseous fuels).,Billion Btu
+NUEGB,Electricity produced from nuclear power by the electric power sector.,Billion Btu
+NUEGD,Nuclear fuel price in the electric power sector.,Dollars per million Btu
+NUEGP,Electricity produced from nuclear power by the electric power sector.,Million kilowatthours
+NUEGV,Nuclear fuel expenditures in the electric power sector.,Million dollars
+PMTCB,All petroleum products total consumption excluding fuel ethanol.,Billion Btu
+SOEGB,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Billion Btu
+SOEGP,Electricity produced from photovoltaic and solar thermal energy by the electric power sector.,Million kilowatthours
+SOTCB,Photovoltaic and solar thermal energy total consumption.,Billion Btu
+SOTXB,Photovoltaic and solar thermal energy total end-use consumption.,Billion Btu
+WDCCB,Wood consumed by the commercial sector,Billion Btu
+WDEIB,Wood and waste consumed by the electric power sector.,Billion Btu
+WDICB,Wood consumed by the industrial sector.,Billion Btu
+WDRCB,Wood consumed by the residential sector.,Billion Btu
+WDRCD,Wood price in the residential sector.,Dollars per million Btu
+WDRCP,Wood consumed by the residential sector.,Thousand cords
+WDRCV,Wood expenditures in the residential sector. ,Million dollars
+WSCCB,Waste consumed by the commercial sector,Billion Btu
+WSEIB,Waste consumed by the electric power sector.,Billion Btu
+WSICB,Waste consumed by the industrial sector.,Billion Btu
+WYEGB,Electricity produced from wind energy by the electric power sector.,Billion Btu
+WYEGP,Electricity produced from wind energy by the electric power sector.,Million kilowatthours
+WYTCB,Electricity produced from wind energy.,Billion Btu

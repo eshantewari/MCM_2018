@@ -13,6 +13,12 @@ def create_data_dictionary(path):
     datadic = pd.read_csv(path, header=0, index_col=0)
     return datadic
 
+# Get data and data dictionary
+def get_data(statecode):
+    statedata = pd.read_csv(get_path(statecode), header=0, index_col=0)
+    datadic = create_data_dictionary('ProblemCDataDic.csv')
+    return statedata, datadic
+
 # Graph a specific attribute of a list of states over time
 def graph_attribute(attribute, statecodes):
 
@@ -33,28 +39,34 @@ def graph_attribute(attribute, statecodes):
 
 
 # Graph multiple attributes of a single state, get correlation between them, presumably they have the same units
-def graph_multiple_attributes(attributes, state):
+def graph_multiple_attributes(attributes, statedata, datadic):
 
     fig, ax = plt.subplots()
 
+    fig.set_size_inches(14, 8)
+
     # Get colors and state data
     colors = plt.cm.rainbow(np.linspace(0, 1, len(attributes)))
-    statedata = pd.read_csv(get_path(state), index_col=0, header=0)
 
     # Run through attributes list
     for color, attribute in zip(colors, attributes):
 
-        ax.plot(statedata.index, statedata.loc[:, attribute], color=color, label=attribute)
+        # Ignore if attribute isn't one of the features, this will happen occasionally
+        if attribute not in statedata.columns:
+            continue
 
-    ax.set(title = 'Attributes in {} Over Time'.format(state), ylabel = 'Use', xlabel='Year')
+        ax.plot(statedata.index, statedata.loc[:, attribute], color=color,
+                label= datadic.loc[attribute, 'Description'] + datadic.loc[attribute, 'Unit'])
+
+    ax.set(title = 'Attributes in State Over Time', ylabel = 'Use', xlabel='Year')
     ax.legend()
     plt.show()
 
 # Run examples of graphing functions and create the data dictionary
-
-datadic = create_data_dictionary('ProblemCDataDic.csv')
-
-print(datadic.columns)
-graph_attribute('BMTCB', ['AZ', 'CA', 'NM', 'TX'])
-attributes = [index for index in datadic.index if 'TCV' in index]
-graph_multiple_attributes(attributes, 'TX')
+if __name__ == '__main__':
+    statedata, datadic = get_data('TX')
+    print(datadic.columns)
+    graph_attribute('BMTCB', ['AZ', 'CA', 'NM', 'TX'])
+    attributes = [index for index in datadic.index if 'ISB' in index]
+    print(attributes)
+    graph_multiple_attributes(attributes, statedata, datadic)
