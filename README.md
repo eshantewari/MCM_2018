@@ -43,3 +43,8 @@ Jacobson 2015 - http://web.stanford.edu/group/efmh/jacobson/Articles/I/USStatesW
 https://www.ipcc.ch/pdf/special-reports/srren/SRREN_FD_SPM_final.pdf
 #### Mortality rates
 https://www.forbes.com/sites/jamesconca/2012/06/10/energys-deathprint-a-price-always-paid/#cb7a4f1709b7
+### Inflation
+https://fred.stlouisfed.org/graph/?g=bXYm
+### Social Cost of Carbon
+https://www.epa.gov/sites/production/files/2016-12/documents/social_cost_of_carbon_fact_sheet.pdf
+5% discount over 8 years is $11
