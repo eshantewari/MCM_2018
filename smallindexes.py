@@ -8,11 +8,12 @@ from scipy.stats.stats import pearsonr
 ### Define Global Variables
 # These are some sectors
 sectordic = {'CC': 'Comercial', 'IC': 'Industrial', 'RC':'Residential', 'AC': 'Transportation',
-             'TC': 'Total Primary Consumption', 'TX': 'Total End Use', 'EG': 'Total Generation',
-             'EI': 'Electric Sector Consumption'}
+             #'TX': 'Total End Use', 'EG': 'Total Generation',
+             #'TC': 'Total Primary Consumption', 'EI': 'Electric Sector Consumption'
+             }
 
 # These are some sources
-sourcedic = {'CL':'Coal', 'NN': 'Natural Gas', 'PA': 'Petroleum Products',
+sourcedic = {'CL':'Coal', 'NG': 'Natural Gas', 'PA': 'Petroleum Products',
              'NU': "Nuclear Electric Power", 'EM': 'Fuel Ethanol',
              'GE': 'Geothermal', 'HY': 'Hydroelectric', 'SO': 'Solar Thermal',
              'WD': 'wood', 'WS': 'Biomass waste', 'ES': 'Electricity Sales',
@@ -81,9 +82,11 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
     else:
         ax.set(xlabel='Year', ylabel='Consumption ({})'.format(newunit))
     if given in sourcedic:
-        ax.set(title = '{} {} Energy Use, 1960-2009'.format(state, sourcedic[given]))
+        ax.set(title = '{} {} Energy Use, {}-{}'.format(state, sourcedic[given], str(1960), str(2009)))
+
     elif given in sectordic:
-        ax.set(title = '{} {} Energy Sources, 1960-2009'.format(state, sectordic[given]))
+        ax.set(title = '{} {} Energy Sources, {}-{}'.format(state, sectordic[given]
+                                                            ))
     else:
         print('You probably inputted the wrong sector or source, which is why the title is missing')
 
@@ -155,8 +158,8 @@ def create_source_profile(state, source, min=0.01, pop_adj=True, inf_adj=True, u
 ## Here, you can just use my template to run things
 if __name__=='__main__':
     statelist = ['AZ', 'TX', 'NM', 'CA']
-    print(create_source_profile('TX', 'CL', min=0.01, inf_adj=False, unit='V'))
-    print(create_source_profile('TX', 'CL', min=0.01, inf_adj=True, unit='V'))
+    create_source_profile('AZ', 'NG', min=0.01, inf_adj=True, unit='B')
+    create_source_profile('TX', 'NG', min=0.01, inf_adj=True, unit='B')
 
 
 
