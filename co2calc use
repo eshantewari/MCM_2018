@@ -1,0 +1,9 @@
+
+
+#### Documentation for smallindexes
+
+This is pretty simple to use. The only function you'll want to use is graph_emissions_profile, which both graphs a profile
+by source of emissions in the state, and also returns a dataframe of the data.
+
+The use is the same as smallindexes - the only difference is that the units possible are 'D', for deaths per year,
+'T' for megatons of CO2 emitted, and 'V' for millions of dollars of damage.
