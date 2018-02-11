@@ -47,4 +47,4 @@ https://www.forbes.com/sites/jamesconca/2012/06/10/energys-deathprint-a-price-al
 https://fred.stlouisfed.org/graph/?g=bXYm
 ### Social Cost of Carbon
 https://www.epa.gov/sites/production/files/2016-12/documents/social_cost_of_carbon_fact_sheet.pdf
-3% discount over 35 years is $69
+5% discount over 8 years is $11
