@@ -1,5 +1,9 @@
 # MCM_2018
 
+## Contest Information
+Team Number: 76796
+Problem C
+
 ## Initial Formatting Docs:
 formatinitialdata will structure the data better (it will also split the file into four files, one for each state)
 graphinitialdata creates a data dictionary and graphs specific attributes within and across states
