@@ -2,14 +2,42 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import graphinitialdata as gd
+import smallindexes as si
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import normalize
 
-df = pd.read_csv(gd.get_path('AZ'), header=0, index_col=0)
+# Computes the average squared correlation between an explanatory variable and a sector's consumption in BTU of
+# different fuels
+def check_squared_corr(covm, sector, explan, unit = 'B'):
+    factors = [factor for factor in covm.index if factor[2:4] == sector and factor[-1] == unit]
+    cors = covm.loc[factors, explan]
+    cors = cors**2
+    return cors.mean()
 
-df_norm = (df - df.mean()) / df.std()
+# Checks which variables of the explans has the highest correlation for a given state and unit
+def check_all_squared_corrs(statecode, explans, unit='B'):
 
-covm = df_norm.cov()
+    # Get data and calculate covariance matrix
+    df = pd.read_csv(gd.get_path(statecode), header=0, index_col=0)
+    df_norm = (df - df.mean()) / df.std()
+    covm = df_norm.cov()
+
+    # Initialize dataframe which will be returned
+    results = pd.DataFrame(index=si.sectordic, columns=explans)
+
+    # Do analysis for all the sectors
+    for sector in si.sectordic:
+        for explan in explans:
+            results.at[sector, explan] = check_squared_corr(covm, sector, explan, unit = 'B')
+
+    return results
+
+# Run for all four states - upon visual inspection, it becomes clear that population is significantly more correlated with any outcomes we're interested in than GDP is.
+for statecode in ['AZ', 'CA', 'NM', 'TX']:
+    print(check_all_squared_corrs(statecode, ['GDPRX', 'TPOPP']))
+
+
+
 
 # Performs PCA, transforms data to n_dim dimensional object, reports what it's doing
 def perform_PCA(statecode, n_dim, unitcode):

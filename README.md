@@ -33,3 +33,13 @@ V = value in million dollars
 
 ### Total end-use consumption
 "A new set of tables for total end-use energy consumption, price, and expenditure estimates is introduced in this cycle. Estimates for total end-use consumption and expenditures are calculated by summing the consumption and expenditures, respectively, of the four end-use sectors: residential, commercial, industrial, and transportation. Estimates for total end-use prices are calculated by dividing total end-use expenditures by the sum of all end-use consumption with prices associated with them."
+
+### Sources Asher has looked at
+
+#### General
+Jacobson 2015 - http://web.stanford.edu/group/efmh/jacobson/Articles/I/USStatesWWS.pdf
+
+#### CO2 Production Data
+https://www.ipcc.ch/pdf/special-reports/srren/SRREN_FD_SPM_final.pdf
+#### Mortality rates
+https://www.forbes.com/sites/jamesconca/2012/06/10/energys-deathprint-a-price-always-paid/#cb7a4f1709b7

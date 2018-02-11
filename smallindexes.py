@@ -2,6 +2,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import graphinitialdata as gd
+from sklearn import linear_model, decomposition
+
+
 
 sectordic = {'CC': 'Comercial', 'IC': 'Industrial', 'RC':'Residential', 'AC': 'Transportation',
              'TC': 'Total Primary Consumption', 'TX': 'Total End Use', 'EG': 'Total Generation',
@@ -13,16 +16,17 @@ sourcedic = {'CL':'Coal', 'NN': 'Natural Gas', 'PA': 'Petroleum Products',
              'WD': 'wood', 'WS': 'Biomass waste', 'ES': 'Electricity Sales',
              'LO': 'Electrical System Losses', 'WY': 'Wind'}
 
-# adjusts for population per capita
+# Adjusts for population per capita
 def adjust_for_population(statedata, unit):
     factors = [factor for factor in statedata.columns if factor[-1] == unit]
     statedata[factors] = statedata[factors].divide((statedata['TPOPP']*1000), axis=0)
     return statedata[factors]
 
-statedata, datadic = gd.get_data('TX')
-print(statedata['TPOPP'], statedata['TETXB'])
-statedata = adjust_for_population(statedata, 'B')
-print(statedata['TETXB'])
+# Adjusts for GDP per capita
+def adjust_for_gdp(statedata, unit):
+    factors = [factor for factor in statedata.columns if factor[-1] == unit]
+    statedata[factors] = statedata[factors].divide((1000000*statedata['GDPRX']), axis=0)
+    return statedata
 
 # Helper function, will either graph a profile of the given sector's energy use in BTU
 # or the given source's energy use in BTU. It does the bulk of the work to graph.
@@ -90,8 +94,9 @@ def graph_sector_profile(sector, statedata, datadic, min, state='', pop_adj = Tr
 
     graph_either_profile(attributelist, sector, statedata, datadic, min, state, pop_adj)
 
+    return attributelist
 
-
+# Will graph a profile of the source's energy use, in BTU
 def graph_source_profile(source, statedata, datadic, min, state='', pop_adj = True):
 
     # Find the right attributes/factors
@@ -100,16 +105,29 @@ def graph_source_profile(source, statedata, datadic, min, state='', pop_adj = Tr
 
     graph_either_profile(attributelist, source, statedata, datadic, min, state, pop_adj)
 
+    return attributelist
 
-
-def create_sector_profile(state, sector, pop_adj = True):
+def create_sector_profile(state, sector, min = 0.01, pop_adj = True, gdp_adj=True):
     statedata, datadic = gd.get_data(state)
-    graph_sector_profile(sector, statedata, datadic, 0.01, state, pop_adj = True)
+    attributelist = graph_sector_profile(sector, statedata, datadic, min, state, pop_adj = True)
+    attributelist.append('GDPRX')
 
-def create_source_profile(state, source):
+    # Normalize
+    statedata = statedata[attributelist]
+    averages = statedata.mean()
+    deviations = statedata.std()
+    statedata = (statedata - averages)/deviations
+
+    # Create covariance matrix, print it
+    covm = statedata.cov()
+    print(covm)
+
+def create_source_profile(state, source, min=0.01):
     statedata, datadic = gd.get_data(state)
-    graph_source_profile(source, statedata, datadic, 0.01, state, pop_adj = True)
+    graph_source_profile(source, statedata, datadic, min, state, pop_adj = True)
 
-
-create_sector_profile('AZ', 'CC')
-create_source_profile('AZ', 'NN')
+if __name__=='__main__':
+    statelist = ['AZ', 'TX', 'MN', 'CA']
+    for sector in sectordic:
+        print(sector)
+        create_sector_profile('AZ', sector)

@@ -19,6 +19,11 @@ def get_data(statecode):
     datadic = create_data_dictionary('ProblemCDataDic.csv')
     return statedata, datadic
 
+# Get only population data from the state
+def get_pop_data(statecode):
+    statedata, datadic = get_data(statecode)
+    return statedata['TPOPP']
+
 # Graph a specific attribute of a list of states over time
 def graph_attribute(attribute, statecodes):
 
