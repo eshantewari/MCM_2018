@@ -9,16 +9,25 @@ from scipy.stats.stats import pearsonr
 ### Define Global Variables
 # These are some sectors
 sectordic = {'CC': 'Comercial', 'IC': 'Industrial', 'RC':'Residential', 'AC': 'Transportation',
-             #'TX': 'Total End Use', 'EG': 'Total Generation',
-             #'TC': 'Total Primary Consumption', 'EI': 'Electric Sector Consumption'
+             'TX': 'Total End Use',
+             #'EG': 'Total Generation',
+             #'TC': 'Total Primary Consumption',
+             'EI': 'Electric Sector Consumption'
              }
-
 # These are some sources
 sourcedic = {'CL':'Coal', 'NG': 'Natural Gas', 'PA': 'Petroleum Products',
              'NU': "Nuclear Electric Power", 'EM': 'Fuel Ethanol',
              'GE': 'Geothermal', 'HY': 'Hydroelectric', 'SO': 'Solar Thermal',
              'WD': 'wood', 'WS': 'Biomass waste', 'ES': 'Electricity Sales',
              'LO': 'Electrical System Losses', 'WY': 'Wind'}
+
+# Get colors, create colordic
+colors = plt.cm.jet(np.linspace(0, 1, len(sourcedic)))
+colordic={}
+
+for source, color in zip(sourcedic, colors):
+    colordic[source] = color
+print(colordic)
 
 # For labeling, create a unit dictionary
 unitdic = {'B': 'Billions BTU', 'V': 'Millions Dollars'}
@@ -60,6 +69,7 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
     # Get rid of factors which are less than the min times the mean of the attributelist
     means = statedata[attributelist].mean()
     attributelist.sort(key = lambda x: means[x], reverse=True)
+
     for factor in means.index:
         if means[factor] < means.mean()*min:
             attributelist.remove(factor)
@@ -69,7 +79,7 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
 
     # Create fig, ax
     fig, ax = plt.subplots()
-    fig.set_size_inches(14, 8)
+    fig.set_size_inches(8, 5)
 
     # Set labels and title, depending on some of the options
 
@@ -84,22 +94,24 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
     else:
         ax.set(xlabel='Year', ylabel='Consumption ({})'.format(newunit))
     if given in sourcedic:
-        print(statedata.index)
         ax.set(title = '{} {} Energy Use, {} to {}'.format(state, sourcedic[given], list(statedata.index)[0],
                                                                 list(statedata.index)[len(statedata)-1]))
     elif given in sectordic:
-        ax.set(title = '{} {} Energy Sources, {} to {}'.format(state, sourcedic[given], list(statedata.index)[0],
+        ax.set(title = '{} {} Energy Sources, {} to {}'.format(state, sectordic[given], list(statedata.index)[0],
                                                                 list(statedata.index)[len(statedata)-1]))
     else:
         print('You probably inputted the wrong sector or source, which is why the title is missing')
 
     # Graph the main contributors on top of each other, in different colors, doing the first one manually
-    ax.fill_between(statedata.index,
-                    [0]*len(statedata),
-                    statedata[attributelist[0]],
-                    color=colors[0],
-                    label = datadic.loc[attributelist[0], 'Description'],
-                    alpha = 0.4)
+    try:
+        ax.fill_between(statedata.index,
+                        [0]*len(statedata),
+                        statedata[attributelist[0]],
+                        color=colors[0],
+                        label = datadic.loc[attributelist[0], 'Description'],
+                        alpha = 0.4)
+    except IndexError:
+        return statedata
 
     # Do the rest automatically
     i = 1
@@ -120,8 +132,12 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
                         alpha = 0.4)
         i += 1
 
-    ax.legend()
-    plt.show()
+    legend = ax.legend(bbox_to_anchor=(0, -0.25), loc=2, borderaxespad=0.)
+    box = ax.get_position()
+    ax.set_position([box.x0, box.y0+0.35*box.height, box.width, box.height*0.65])
+    plt.setp(plt.gca().get_legend().get_texts(), fontsize='6')
+    path = 'ProfileGraphs/'+ state + given + 'Graph' + '.png'
+    plt.savefig(path, bbox_inches='tight')
 
     return statedata
 
@@ -161,8 +177,9 @@ def create_source_profile(state, source, min=0.01, pop_adj=True, inf_adj=True, u
 ## Here, you can just use my template to run things
 if __name__=='__main__':
     statelist = ['AZ', 'TX', 'NM', 'CA']
-    create_source_profile('AZ', 'NG', min=0.01, inf_adj=True, unit='B')
-    create_source_profile('TX', 'NG', min=0.01, inf_adj=True, unit='B')
+    for state in statelist:
+        for sector in sectordic:
+            create_sector_profile(state, sector, min=0.01, pop_adj=True, unit='B')
 
 
 
