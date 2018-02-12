@@ -4,22 +4,28 @@ import matplotlib.pyplot as plt
 import graphinitialdata as gd
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import normalize
+from sys import exit
+
+azdata, datadic = gd.get_data('AZ')
+factorlist = [factor for factor in azdata.columns if factor[-1] == 'B']
+datadic.loc[factorlist].to_csv('BTUDataDic.csv')
 
 
-statepath = gd.get_path('NM')
+exit()
 
-azdata = pd.read_csv(statepath, header=0, index_col=0)
+
+print(azdata)
+azdata = pd.DataFrame(azdata.ewm().mean(), index=azdata.index, columns=azdata.columns)
+print(azdata)
+
 datadic = gd.create_data_dictionary('ProblemCDataDic.csv')
 print(datadic.columns)
 
 factors = ['FFTCB', 'TETXB', 'NUETB', 'RETCB', 'ELNIB', 'ELISB']
 
-plt.figure(figsize=(14,8))
-
 fig, ax = plt.subplots()
 
 fig.set_size_inches(14,8)
-
 
 for factor in factors:
     ax.plot(azdata[factor], label=datadic.loc[factor, 'Description'])

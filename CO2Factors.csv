@@ -1,10 +1,10 @@
 Technology ,Code,gCO2eq/kWh,kgCO2eq/bilBTU
-Biopower,ES,18,5275.281788
+Biopower,EM,18,5275.281788
 Coal,CL,1001,293364.2817
 Solar (CSP and PV),SO,34,9964.421155
 Geothermal Energy,GE,45,13188.20447
 Hydropower,HY,4,1172.284842
-Natural Gas,NN,469,137450.3977
+Natural Gas,NG,469,137450.3977
 Nuclear Energy,NU,16,4689.139367
 Oil/Petroleum,PA,840,246179.8168
 Wind Energy,WY,12,3516.854525

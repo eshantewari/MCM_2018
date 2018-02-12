@@ -1,8 +1,8 @@
 Technology,Code,Deaths/Tril KWH,Deaths/Bil BTU
 Coal,CL,"10,000",0.002930832
 Oil/Petroleum,PA,"36,000",0.010550996
-Natural Gas,NN,4000,0.001172333
-Biopower,ES,"24,000",0.007033998
+Natural Gas,NG,4000,0.001172333
+Biopower,EM,"24,000",0.007033998
 Solar ,SO,440,0.000128957
 Wind Energy,WY,150,4.40E-05
 Hydropower,HY,5,1.47E-06

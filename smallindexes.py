@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import graphinitialdata as gd
+import popprojections as pp
 from sklearn import linear_model, decomposition
 from scipy.stats.stats import pearsonr
 
@@ -25,9 +26,10 @@ unitdic = {'B': 'Billions BTU', 'V': 'Millions Dollars'}
 ### Helper functions which adjust for population, GDP, inflation
 
 # Adjusts for population per capita
-def adjust_for_population(statedata, unit):
+def adjust_for_population(statedata, state, unit='B'):
     factors = [factor for factor in statedata.columns if factor[-1] == unit]
-    statedata[factors] = statedata[factors].divide((statedata['TPOPP']*1000), axis=0)
+    popdata = pp.get_all_pop_data(state)
+    statedata[factors] = statedata[factors].divide(1000*popdata.loc[statedata.index], axis=0)
     return statedata[factors]
 
 # Adjusts for GDP per capita
@@ -51,7 +53,7 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
 
     # Adjust for state population
     if pop_adj == True:
-        statedata = adjust_for_population(statedata, unit)
+        statedata = adjust_for_population(statedata, state, unit)
     if inf_adj == True and unit == 'V':
         statedata = adjust_for_inflation(statedata, unit)
 
@@ -82,17 +84,18 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
     else:
         ax.set(xlabel='Year', ylabel='Consumption ({})'.format(newunit))
     if given in sourcedic:
-        ax.set(title = '{} {} Energy Use, {}-{}'.format(state, sourcedic[given], str(1960), str(2009)))
-
+        print(statedata.index)
+        ax.set(title = '{} {} Energy Use, {} to {}'.format(state, sourcedic[given], list(statedata.index)[0],
+                                                                list(statedata.index)[len(statedata)-1]))
     elif given in sectordic:
-        ax.set(title = '{} {} Energy Sources, {}-{}'.format(state, sectordic[given]
-                                                            ))
+        ax.set(title = '{} {} Energy Sources, {} to {}'.format(state, sourcedic[given], list(statedata.index)[0],
+                                                                list(statedata.index)[len(statedata)-1]))
     else:
         print('You probably inputted the wrong sector or source, which is why the title is missing')
 
     # Graph the main contributors on top of each other, in different colors, doing the first one manually
-    ax.fill_between(np.arange(1960, 2010, 1),
-                    [0]*50,
+    ax.fill_between(statedata.index,
+                    [0]*len(statedata),
                     statedata[attributelist[0]],
                     color=colors[0],
                     label = datadic.loc[attributelist[0], 'Description'],
@@ -109,7 +112,7 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
             label = sourcedic[attributelist[i][0:2]] + sectordic[attributelist[i][2:4]]
 
         # Graph
-        ax.fill_between(np.arange(1960, 2010, 1),
+        ax.fill_between(statedata.index,
                         statedata[attributelist[0:i+1]].sum(axis=1),
                         statedata[attributelist[0:i]].sum(axis=1),
                         color = colors[i],

@@ -24,6 +24,12 @@ def get_pop_data(statecode):
     statedata, datadic = get_data(statecode)
     return statedata['TPOPP']
 
+# Get inflation data
+def get_inf_data():
+    inflationdata = pd.read_csv('Inflation.csv', index_col=0, header=0)
+    return inflationdata
+
+
 # Graph a specific attribute of a list of states over time
 def graph_attribute(attribute, statecodes):
 
@@ -73,5 +79,3 @@ if __name__ == '__main__':
     print(datadic.columns)
     graph_attribute('BMTCB', ['AZ', 'CA', 'NM', 'TX'])
     attributes = [index for index in datadic.index if 'ISB' in index]
-    print(attributes)
-    graph_multiple_attributes(attributes, statedata, datadic)
