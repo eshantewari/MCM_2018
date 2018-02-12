@@ -48,3 +48,5 @@ https://fred.stlouisfed.org/graph/?g=bXYm
 ### Social Cost of Carbon
 https://www.epa.gov/sites/production/files/2016-12/documents/social_cost_of_carbon_fact_sheet.pdf
 5% discount over 8 years is $11
+### Climate Data
+https://www.ncdc.noaa.gov/cag/
