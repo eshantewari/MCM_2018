@@ -118,14 +118,14 @@ def graph_emissions_profile(state, unit, min=0.01, pop_adj=True, inf_adj=True, s
     if unit == 'D':
         data = calc_sector_mortality(statedata, agg)
     elif unit == 'T':
-        data = calc_sector_emissions(statedata, datadic, agg)
+        data = calc_sector_emissions(statedata, agg)
     elif unit == 'V':
-        data = calc_sector_emissions(statedata, datadic, agg)*11 # This 36 is from the EPA, it's the social cost of carbon per metric ton
+        data = calc_sector_emissions(statedata, agg)*11 # This 11 is from the EPA, it's the social cost of carbon per metric ton
     else:
         print('You entered the wrong type of unit: the only types are T, D, and V')
         return None
 
-    return graph_emissions_profile(data, datadic, unit, min, pop_adj, inf_adj, sum, agg)
+    return graph_emissions_profile(data, unit, min, pop_adj, inf_adj, sum, agg)
 
 def graph_emissions_profile_v2(data, datadic, state, unit='B', min=0.01, pop_adj=True,
                                inf_adj=True, sum = False, agg = 'TCB'):
@@ -203,4 +203,4 @@ def graph_emissions_profile_v2(data, datadic, state, unit='B', min=0.01, pop_adj
     return data
 
 if __name__ == '__main__':
-    graph_emissions_profile('TX', 'V', pop_adj=False, inf_adj=False, sum=False)
+    graph_emissions_profile_v2('TX', 'V', pop_adj=False, inf_adj=False)

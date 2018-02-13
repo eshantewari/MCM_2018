@@ -24,6 +24,10 @@ def get_pop_data(statecode):
     statedata, datadic = get_data(statecode)
     return statedata['TPOPP']
 
+def get_gdp_data(statecode):
+    statedata, datadic = get_data(statecode)
+    return statedata['GDPRX'].divide(statedata['TPOPP']).multiply(get_inf_data().loc[2005, 'Value in 2009 Dollars'])
+
 # Get inflation data
 def get_inf_data():
     inflationdata = pd.read_csv('Inflation.csv', index_col=0, header=0)
@@ -75,7 +79,4 @@ def graph_multiple_attributes(attributes, statedata, datadic):
 
 # Run examples of graphing functions and create the data dictionary
 if __name__ == '__main__':
-    statedata, datadic = get_data('TX')
-    print(datadic.columns)
-    graph_attribute('BMTCB', ['AZ', 'CA', 'NM', 'TX'])
-    attributes = [index for index in datadic.index if 'ISB' in index]
+    print(get_gdp_data('NM'))

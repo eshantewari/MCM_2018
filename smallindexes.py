@@ -27,7 +27,6 @@ colordic={}
 
 for source, color in zip(sourcedic, colors):
     colordic[source] = color
-print(colordic)
 
 # For labeling, create a unit dictionary
 unitdic = {'B': 'Billions BTU', 'V': 'Millions Dollars'}
@@ -102,13 +101,20 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
     else:
         print('You probably inputted the wrong sector or source, which is why the title is missing')
 
+
+    # Try to label
+    try:
+        label = datadic.loc[attributelist[0], 'Description']
+    except:
+        label = sourcedic[attributelist[0][0:2]] + sectordic[attributelist[0][2:4]]
+
     # Graph the main contributors on top of each other, in different colors, doing the first one manually
     try:
         ax.fill_between(statedata.index,
                         [0]*len(statedata),
                         statedata[attributelist[0]],
                         color=colors[0],
-                        label = datadic.loc[attributelist[0], 'Description'],
+                        label = label,
                         alpha = 0.4)
     except IndexError:
         return statedata
@@ -137,7 +143,10 @@ def graph_either_profile(attributelist, given, statedata, datadic, min, state, p
     ax.set_position([box.x0, box.y0+0.35*box.height, box.width, box.height*0.65])
     plt.setp(plt.gca().get_legend().get_texts(), fontsize='6')
     path = 'ProfileGraphs/'+ state + given + 'Graph' + '.png'
-    plt.savefig(path, bbox_inches='tight')
+    if __name__ == '__main__':
+        plt.savefig(path, bbox_inches='tight')
+    else:
+        plt.show()
 
     return statedata
 

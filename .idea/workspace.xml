@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/graphinitialdata.py" line="75" />
+    <bookmark url="file://$PROJECT_DIR$/graphinitialdata.py" line="79" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea770bb9-40ed-42d3-97e8-9a5a0fca8a1e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/renewableprojections.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/RNData.csv" afterPath="$PROJECT_DIR$/RNData.csv" />
       <change beforePath="$PROJECT_DIR$/climateprojections.py" afterPath="$PROJECT_DIR$/climateprojections.py" />
+      <change beforePath="$PROJECT_DIR$/co2calc.py" afterPath="$PROJECT_DIR$/co2calc.py" />
+      <change beforePath="$PROJECT_DIR$/graphinitialdata.py" afterPath="$PROJECT_DIR$/graphinitialdata.py" />
+      <change beforePath="$PROJECT_DIR$/layer1.py" afterPath="$PROJECT_DIR$/layer1.py" />
+      <change beforePath="$PROJECT_DIR$/layer2on.py" afterPath="$PROJECT_DIR$/layer2on.py" />
+      <change beforePath="$PROJECT_DIR$/popprojections.py" afterPath="$PROJECT_DIR$/popprojections.py" />
+      <change beforePath="$PROJECT_DIR$/renewableprojections.py" afterPath="$PROJECT_DIR$/renewableprojections.py" />
       <change beforePath="$PROJECT_DIR$/smallindexes.py" afterPath="$PROJECT_DIR$/smallindexes.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,102 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="graphinitialdata.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/graphinitialdata.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="co2calc.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/co2calc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="smallindexes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/smallindexes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="53" column="69" lean-forward="false" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layer2on.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layer2on.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layer1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layer1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popprojections.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/popprojections.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="climateprojections.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/climateprojections.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="renewableprojections.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/renewableprojections.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -125,36 +36,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>statedata</find>
-      <find>adjust_for_population</find>
-      <find>size</find>
-      <find>return statedata</find>
-      <find>graph_sector_profile</find>
-      <find>(8, 4)</find>
-      <find>in</find>
-      <find>inflation_adj</find>
+      <find>factors4</find>
+      <find>2005</find>
+      <find>datadic</find>
+      <find>graph_pre</find>
+      <find>'Predicted</find>
+      <find>(8,</find>
+      <find>plt.show()</find>
+      <find>EM</find>
+      <find>climat=</find>
+      <find>prediction1</find>
       <find>plt.</find>
-      <find>r</find>
-      <find>0.8</find>
-      <find>fit[0]</find>
-      <find>fit</find>
-      <find>modeldata =</find>
-      <find>years =</find>
-      <find>years</find>
-      <find>print(fore</find>
-      <find>polyfit</find>
-      <find>pd.Series</find>
-      <find>values</find>
-      <find>observed data</find>
-      <find>.ewm</find>
-      <find>bbox</find>
-      <find>graphing</find>
-      <find>NN:</find>
-      <find>print(</find>
-      <find>w=</find>
-      <find>get_infl</find>
-      <find>get_inflation</find>
-      <find>'Value</find>
+      <find>ax.</find>
+      <find>plt.show</find>
+      <find>graph_predictions</find>
+      <find>.txt</find>
+      <find>graph</find>
+      <find>data = calc_sector_emissions</find>
+      <find>calc_sector_emissions</find>
+      <find>agg='T</find>
+      <find>'T'</find>
+      <find>fig.savefig</find>
+      <find>savefig</find>
+      <find>ax.scatter</find>
+      <find>.set</find>
+      <find>pcov</find>
+      <find>get_pop_data</find>
+      <find>graph_emissions_profile</find>
+      <find>tight</find>
+      <find>plt.show()</find>
+      <find>x, logdata</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,19 +83,20 @@
         <option value="$PROJECT_DIR$/smallindexes use" />
         <option value="$PROJECT_DIR$/co2calc use" />
         <option value="$PROJECT_DIR$/layer2.py" />
+        <option value="$PROJECT_DIR$/renewableprojections.py" />
+        <option value="$PROJECT_DIR$/climateprojections.py" />
+        <option value="$PROJECT_DIR$/smallindexes.py" />
         <option value="$PROJECT_DIR$/graphinitialdata.py" />
         <option value="$PROJECT_DIR$/layer2on.py" />
-        <option value="$PROJECT_DIR$/layer1.py" />
         <option value="$PROJECT_DIR$/co2calc.py" />
-        <option value="$PROJECT_DIR$/smallindexes.py" />
         <option value="$PROJECT_DIR$/popprojections.py" />
-        <option value="$PROJECT_DIR$/climateprojections.py" />
-        <option value="$PROJECT_DIR$/renewableprojections.py" />
+        <option value="$PROJECT_DIR$/layer1.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="976" />
     <option name="height" value="1088" />
   </component>
@@ -234,7 +146,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.renewableprojections">
+  <component name="RunManager" selected="Python.layer1">
     <configuration name="PCAbyState" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -485,18 +397,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20729773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38799572" sideWeight="0.09307245" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24651662" sideWeight="0.17239556" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38799572" sideWeight="0.9069275" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24651662" sideWeight="0.8276044" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20729773" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39871383" sideWeight="0.49814913" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39761648" sideWeight="0.4908504" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -536,7 +447,7 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -593,14 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../CampaignSpending/logreg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -645,16 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layer2on.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/explorations.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -663,48 +556,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/co2calc.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layer1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/climateprojections.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="3" />
+        <state relative-caret-position="336">
+          <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/popprojections.py">
+    <entry file="file://$PROJECT_DIR$/layer2on.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="435">
+          <caret line="40" column="54" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="54" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/renewableprojections.py">
+    <entry file="file://C:/Python36/Lib/site-packages/scipy/optimize/minpack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state relative-caret-position="370">
+          <caret line="744" column="35" lean-forward="false" selection-start-line="744" selection-start-column="35" selection-end-line="744" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graphinitialdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="17" column="38" lean-forward="false" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/co2calc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="177" column="31" lean-forward="false" selection-start-line="177" selection-start-column="31" selection-end-line="177" selection-end-column="31" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -713,20 +604,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/smallindexes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="53" column="69" lean-forward="false" selection-start-line="53" selection-start-column="63" selection-end-line="53" selection-end-column="69" />
+        <state relative-caret-position="201">
+          <caret line="146" column="37" lean-forward="false" selection-start-line="146" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graphinitialdata.py">
+    <entry file="file://$PROJECT_DIR$/layer1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="456">
+          <caret line="336" column="63" lean-forward="false" selection-start-line="336" selection-start-column="63" selection-end-line="336" selection-end-column="63" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/popprojections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="74" column="18" lean-forward="false" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/climateprojections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-561">
+          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/renewableprojections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

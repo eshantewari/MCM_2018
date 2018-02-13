@@ -9,15 +9,16 @@ def renewable_project(renewable):
 
     # Models, graphs, returns renewable cost projections by state
     # get data
-    data = pd.Series(np.random.standard_exponential((50)), index = list(np.arange(1960, 2010, 1)))
+    initdata = pd.read_csv('RNData.csv', header = 0, index_col = 0)
+    initdata = initdata[renewable]
+    data = initdata[initdata.notnull()]
 
     # Take log
     logdata = np.log(data.values)
-    print(logdata)
     x = np.array(data.index)
 
     # Fit x, logy, create model data
-    fit = np.polyfit(x, logdata, 1, w=np.sqrt(data.values))
+    fit = np.polyfit(x, logdata, 1)
     years = np.arange(1960, 2051, 1)
     modeldata = math.e ** (fit[0] * years + fit[1])
 
@@ -30,4 +31,9 @@ def renewable_project(renewable):
         ax.legend()
         plt.show()
 
-renewable_project('Nuclear')
+    modeldata = pd.Series(modeldata, index=np.arange(1960, 2051, 1))
+    modeldata = modeldata[modeldata.index > 2009]
+    modeldata = data.append(modeldata)
+    modeldata.reindex(np.arange(1960, 2051, 1))
+
+    return modeldata

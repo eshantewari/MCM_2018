@@ -35,7 +35,7 @@ def predict_climate_data(state):
     years = np.arange(1960, 2051, 1)
 
     # Create model dataframe
-    modeled_data = pd.DataFrame(index=np.arange(1960, 2051, 2), columns=observed_data.columns)
+    modeled_data = pd.DataFrame(index=np.arange(1960, 2051, 1), columns=observed_data.columns)
 
     fig, ax = plt.subplots()
 
